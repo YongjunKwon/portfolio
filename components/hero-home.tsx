@@ -70,8 +70,8 @@ export default function HeroHome() {
               data-aos="zoom-y-out"
               data-aos-delay={150}
             >
-              The website builder you're <br className="max-lg:hidden" />
-              looking for
+              용준이의 포트폴리오 <br className="max-lg:hidden" />
+              사이트
             </h1>
             <div className="mx-auto max-w-3xl">
               <p
