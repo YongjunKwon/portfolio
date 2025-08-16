@@ -13,7 +13,7 @@ export default function HeroHome() {
     setIsModalOpen(true);
   };
 
-  const closeModal = (e) => {
+  const closeModal = (e: { target: any; currentTarget: any; }) => {
     // 이벤트 버블링을 막아 이미지 클릭 시 모달이 닫히지 않게 합니다.
     if (e.target === e.currentTarget) {
       setIsModalOpen(false);
