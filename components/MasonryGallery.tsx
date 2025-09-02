@@ -14,7 +14,7 @@ type Props = {
 export default function MasonryGallery({images, onClick}: Props) {
   return (
       <ResponsiveMasonry
-          columnsCountBreakPoints={{350: 1, 750: 2, 900: 4}}
+          columnsCountBreakPoints={{350: 4, 750: 4, 900: 4}}
           gutterBreakpoints={{350: "2px", 750: "2px", 900: "2px"}}
       >
         <Masonry gutter="2px">
