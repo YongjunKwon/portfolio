@@ -28,7 +28,7 @@ export default function MasonryGallery({images, onClick}: Props) {
 
   return (
       <ResponsiveMasonry
-          columnsCountBreakPoints={{350: 4, 750: 4, 900: 4}}
+          columnsCountBreakPoints={{350: 2, 750: 3, 900: 4}}
           gutterBreakPoints={{350: "4px", 750: "4px", 900: "4px"}}
       >
         <Masonry gutter="2px">
