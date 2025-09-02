@@ -48,6 +48,7 @@ export default function MasonryGallery({images, onClick}: Props) {
                     className={`
                 w-[500px] h-auto rounded-2xl cursor-pointer object-cover
                 transition-opacity duration-500
+                filter hover:brightness-70
                 ${loadedImages[idx] ? "opacity-100" : "opacity-0 absolute top-0 left-0"}
               `}
                 />
