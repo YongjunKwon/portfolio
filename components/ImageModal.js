@@ -1,23 +1,31 @@
 import React from 'react';
-import Image from 'next/image';
 
-const ImageModal = ({ src, alt, onClose }) => {
-    return (
-        <div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75"
-            onClick={onClose} // 배경 클릭 시 모달 닫기
-        >
-            <div className="relative max-w-5xl">
-                <Image src={src} alt={alt} layout="intrinsic" />
-                <button
-                    onClick={onClose}
-                    className="absolute -top-10 right-0 text-white text-4xl"
-                >
-                    &times;
-                </button>
-            </div>
-        </div>
-    );
-};
+const ImageModal = ({src, alt, onClose}) => (
+    <div
+        className="fixed inset-0 z-50 bg-black bg-opacity-75 overflow-auto"
+        onClick={onClose}
+    >
+      {/* 1) 닫기 버튼: 뷰포트 기준으로 fixed */}
+      <button
+          onClick={onClose}
+          aria-label="Close modal"
+          className="fixed top-2 right-6 z-50 text-white text-4xl bg-black bg-opacity-50 rounded-full p-2 hover:bg-opacity-75 transition"
+      >
+        &times;
+      </button>
+
+      {/* 2) 이미지 영역: 스크롤은 outer wrapper가 담당 */}
+      <div
+          className="flex items-center justify-center p-4"
+          onClick={(e) => e.stopPropagation()}
+      >
+        <img
+            src={src}
+            alt={alt}
+            className="block max-w-none"
+        />
+      </div>
+    </div>
+);
 
 export default ImageModal;
