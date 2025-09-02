@@ -14,9 +14,9 @@ const ImageModal = ({src, alt, onClose}) => (
           onClick={onClose}
           aria-label="Close modal"
           className="
-        fixed top-4 right-8 z-50
-        text-white text-4xl
-        bg-black bg-opacity-50 rounded-full p-2
+        fixed top-6 right-6 z-50
+        text-white text-2xl
+        bg-black bg-opacity-50 rounded-full px-1 py-0.5
         hover:bg-opacity-75 transition
       "
       >
