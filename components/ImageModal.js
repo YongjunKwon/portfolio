@@ -31,7 +31,12 @@ const ImageModal = ({src, alt, onClose}) => (
         <img
             src={src}
             alt={alt}
-            className="block max-w-none"
+            className="
+          block
+          w-auto
+          max-w-full       // 모바일에서 화면 넘지 않도록
+          md:max-w-none    // PC(md 이상)에서는 원래 크기 유지
+        "
         />
       </div>
     </div>
