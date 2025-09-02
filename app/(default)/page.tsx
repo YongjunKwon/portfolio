@@ -4,8 +4,8 @@ import fs from "fs/promises";
 import path from "path";
 
 export const metadata = {
-  title: "Home - Simple",
-  description: "Page description",
+  title: "JUNG JIN HONG - Portfolio",
+  description: "JUNG JIN HONG - Portfolio",
 };
 
 import Hero from "@/components/hero-home";
@@ -37,10 +37,10 @@ export default async function Home() {
         <Hero images={images}/>
 
         {/* 아래 컴포넌트들도 필요에 따라 활성화하세요 */}
-        {/* <BusinessCategories /> */}
-        {/* <FeaturesPlanet /> */}
-        {/* <LargeTestimonial /> */}
-        {/* <Cta /> */}
+        <BusinessCategories/>
+        <FeaturesPlanet/>
+        <LargeTestimonial/>
+        {/*<Cta/>*/}
       </>
   );
 }
